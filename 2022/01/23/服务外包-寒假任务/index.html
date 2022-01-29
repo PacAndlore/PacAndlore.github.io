@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://example.com/.com//image-20220124003543822.png">
 <meta property="og:image" content="http://example.com/.com//image-20220125011941005.png">
 <meta property="article:published_time" content="2022-01-23T15:15:53.000Z">
-<meta property="article:modified_time" content="2022-01-29T07:23:34.088Z">
+<meta property="article:modified_time" content="2022-01-29T07:27:12.176Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="服务外包">
 <meta name="twitter:card" content="summary">
@@ -185,7 +185,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-29 15:23:34" itemprop="dateModified" datetime="2022-01-29T15:23:34+08:00">2022-01-29</time>
+                <time title="Modified: 2022-01-29 15:27:12" itemprop="dateModified" datetime="2022-01-29T15:27:12+08:00">2022-01-29</time>
               </span>
 
           
@@ -199,7 +199,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="寒假也要做服务外包"><a href="#寒假也要做服务外包" class="headerlink" title="寒假也要做服务外包"></a>寒假也要做服务外包</h1><span id="more"></span>
+        <p>寒假也要做服务外包</p>
+<span id="more"></span>
 <h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><p>首先整理我们所有算法中可能涉及到的参数。比如：13页中的xx倍(可以给一个变量，比如N)，13页严格的说是有3个不同的参数：n1, n2, n3，分别表示变异值、标准差、平均值。还有没有其它的？比如各种分类器中有没有什么参数？</p>
 <p>暂时能想到的使用的参数：</p>
 <ol>
@@ -276,7 +277,6 @@
 <p>​    3）计算四个月销量均值的方差，如果方差大说明该商品整体受月份的影响程度较大，反之影响程度较小</p>
 </li>
 </ol>
-<p>​       </p>
 <h1 id="四"><a href="#四" class="headerlink" title="四"></a>四</h1><p>同样的，建立不同产品的价格销售异常检测模型。</p>
 <ol>
 <li>可直接孤立森林跑，因为是单变量，可以不用考虑类别</li>
@@ -296,7 +296,7 @@
 <li>卖家的评分。卖家的评分低但是销量高的，可以怀疑为刷单。</li>
 </ol>
 <h1 id="算法设计初步构思"><a href="#算法设计初步构思" class="headerlink" title="算法设计初步构思"></a>算法设计初步构思</h1><ol>
-<li>刷单行为除了刷销量外，主要是刷评论数和收藏数，一般来说收藏数都会大于评论数，可以将评论数和收藏数的比值（n6）纳入参数；但是有的商品评论收藏数都是零，令其评论数和收藏数之比为0。其中n6大于等于1或者大于<script type="math/tex">\mu+3\delta</script>的有较大概率为刷单（需要排除销量小的商品）</li>
+<li>刷单行为除了刷销量外，主要是刷评论数和收藏数，一般来说收藏数都会大于评论数，可以将评论数和收藏数的比值（n6）纳入参数；但是有的商品评论收藏数都是零，令其评论数和收藏数之比为0。其中n6大于等于1或者大于$\mu+3\delta$的有较大概率为刷单（需要排除销量小的商品）</li>
 <li>商品类别确定：赛题所给数据提供了商品的五个等级的类目</li>
 </ol>
 <h1 id="工作时间记录"><a href="#工作时间记录" class="headerlink" title="工作时间记录"></a>工作时间记录</h1><p>2022/1/24-2022/1/25</p>
@@ -384,7 +384,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%92%E5%81%87%E4%B9%9F%E8%A6%81%E5%81%9A%E6%9C%8D%E5%8A%A1%E5%A4%96%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">寒假也要做服务外包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80"><span class="nav-number">2.</span> <span class="nav-text">一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C"><span class="nav-number">3.</span> <span class="nav-text">二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89"><span class="nav-number">4.</span> <span class="nav-text">三</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1"><span class="nav-number">4.1.</span> <span class="nav-text">3.1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E7%B1%BB%E5%88%AB%E7%BC%BA%E7%9C%81%E7%9A%84%E8%AE%B0%E5%BD%95%E6%95%B0%E9%87%8F"><span class="nav-number">4.1.0.1.</span> <span class="nav-text">计算类别缺省的记录数量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E6%89%80%E6%9C%89%E7%B1%BB%E5%88%AB%E7%9A%84%E6%95%B0%E9%87%8F"><span class="nav-number">4.1.0.2.</span> <span class="nav-text">统计所有类别的数量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2"><span class="nav-number">4.2.</span> <span class="nav-text">3.2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B"><span class="nav-number">5.</span> <span class="nav-text">四</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94"><span class="nav-number">6.</span> <span class="nav-text">五</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD"><span class="nav-number">7.</span> <span class="nav-text">六</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83"><span class="nav-number">8.</span> <span class="nav-text">七</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB"><span class="nav-number">9.</span> <span class="nav-text">文献阅读</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%AD%A5%E6%9E%84%E6%80%9D"><span class="nav-number">10.</span> <span class="nav-text">算法设计初步构思</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%97%B6%E9%97%B4%E8%AE%B0%E5%BD%95"><span class="nav-number">11.</span> <span class="nav-text">工作时间记录</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80"><span class="nav-number">1.</span> <span class="nav-text">一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C"><span class="nav-number">2.</span> <span class="nav-text">二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89"><span class="nav-number">3.</span> <span class="nav-text">三</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1"><span class="nav-number">3.1.</span> <span class="nav-text">3.1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E7%B1%BB%E5%88%AB%E7%BC%BA%E7%9C%81%E7%9A%84%E8%AE%B0%E5%BD%95%E6%95%B0%E9%87%8F"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">计算类别缺省的记录数量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E6%89%80%E6%9C%89%E7%B1%BB%E5%88%AB%E7%9A%84%E6%95%B0%E9%87%8F"><span class="nav-number">3.1.0.2.</span> <span class="nav-text">统计所有类别的数量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2"><span class="nav-number">3.2.</span> <span class="nav-text">3.2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B"><span class="nav-number">4.</span> <span class="nav-text">四</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94"><span class="nav-number">5.</span> <span class="nav-text">五</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD"><span class="nav-number">6.</span> <span class="nav-text">六</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83"><span class="nav-number">7.</span> <span class="nav-text">七</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB"><span class="nav-number">8.</span> <span class="nav-text">文献阅读</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E5%88%9D%E6%AD%A5%E6%9E%84%E6%80%9D"><span class="nav-number">9.</span> <span class="nav-text">算法设计初步构思</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%97%B6%E9%97%B4%E8%AE%B0%E5%BD%95"><span class="nav-number">10.</span> <span class="nav-text">工作时间记录</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -489,6 +489,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
