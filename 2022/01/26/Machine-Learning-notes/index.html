@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="模型越复杂，模型拟合能力越强，偏差逐渐变小，容易过拟合；模型越复杂，可能性越多，方差越大。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learning notes">
+<meta property="og:url" content="http://example.com/2022/01/26/Machine-Learning-notes/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="模型越复杂，模型拟合能力越强，偏差逐渐变小，容易过拟合；模型越复杂，可能性越多，方差越大。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/.com//image-20220127000146811.png">
+<meta property="og:image" content="http://example.com/.com//image-20220127000127633.png">
+<meta property="og:image" content="http://example.com/.com//image-20220127002003657.png">
+<meta property="article:published_time" content="2022-01-26T15:35:40.000Z">
+<meta property="article:modified_time" content="2022-01-26T17:20:09.625Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="机器学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/.com//image-20220127000146811.png">
+
+<link rel="canonical" href="http://example.com/2022/01/26/Machine-Learning-notes/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Machine Learning notes | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/26/Machine-Learning-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Machine Learning notes
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-01-26 23:35:40" itemprop="dateCreated datePublished" datetime="2022-01-26T23:35:40+08:00">2022-01-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-27 01:20:09" itemprop="dateModified" datetime="2022-01-27T01:20:09+08:00">2022-01-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>模型越复杂，模型拟合能力越强，偏差逐渐变小，容易过拟合；模型越复杂，可能性越多，方差越大。</p>
+<span id="more"></span>
+<h2 id="数据集划分"><a href="#数据集划分" class="headerlink" title="数据集划分"></a>数据集划分</h2><p>总数据集一般可以划分成训练集、验证集和测试集，其比例为0.8:0.1:0.1。</p>
+<ul>
+<li><p>训练集用于训练模型</p>
+</li>
+<li><p>验证集用于评估模型，调整超参数（训练模型通常需要很多参数，模型训练中没有用到的参数为超参数），优化模型</p>
+</li>
+<li>测试机不参与模型训练流程，其作用为检验模型是否有效</li>
+</ul>
+<p>三者关系如下</p>
+<p><img src="/.com//image-20220127000146811.png" alt="image-20220127000146811"></p>
+<h2 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h2><ul>
+<li>二分类数据集可分为正例和负例两种</li>
+<li>数据集经过模型分类后可分为预测正例和预测负例</li>
+<li>将两种分类方法交叉后产生了四种数据集合，即正例被预测为正例(<strong>T</strong>rue<strong>P</strong>ositives)、正例被预测为负例(<strong>F</strong>alse<strong>P</strong>ositives)、负例被预测为负例(<strong>T</strong>rue<strong>N</strong>egatives)、负例被预测为正例(<strong>F</strong>alse<strong>P</strong>ositives)</li>
+</ul>
+<p><img src="/.com//image-20220127000127633.png" alt="image-20220127000127633" style="zoom:33%;"></p>
+<h4 id="混淆矩阵衍生评价指标"><a href="#混淆矩阵衍生评价指标" class="headerlink" title="混淆矩阵衍生评价指标"></a>混淆矩阵衍生评价指标</h4><ul>
+<li>召回率(Recall)=TP/(TP+FN)   </li>
+</ul>
+<p>将某个标签判断正确的概率（宁可错杀不放过一个），比如计算正样本的召回率，就是模型预测为正样本的数量处于总的正样本数量；</p>
+<p>示意图如下，当M1模型转化为M2模型时，圆圈的召回率增大，三角的召回率减小。</p>
+<p><img src="/.com//image-20220127002003657.png" alt="image-20220127002003657" style="zoom: 33%;"></p>
+<ul>
+<li>精准度(Precision)=TP/(TP+FP)</li>
+</ul>
+<p>模型预测为某个值的精准度，比如上图，M1向M2转变时，圆圈的精准度下降，而三角的精准度上升</p>
+<ul>
+<li>准确率(Accuracy)=(TP+TN)/Total</li>
+</ul>
+<p>模型预测正确的概率，这个值的变换需要看当模型转换后是圆圈被验证为正确的多还是三角被验证为错误的多。</p>
+<ul>
+<li>F1值=$2<em>Recall</em>Precision/(Recall+Precision)$</li>
+</ul>
+<p>暂未理解这个参数的作用</p>
+<h2 id="偏差与方差"><a href="#偏差与方差" class="headerlink" title="偏差与方差"></a>偏差与方差</h2><p>偏差(Bias):期望值和实际值的差值</p>
+<p>方差(Variance):模型预测值的方差</p>
+<p>实际预测误差:$Err(x)=Bias^2+Variance+Irreducible Error$   (Irreducible Error:不可预测错误)</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 机器学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/23/%E6%9C%8D%E5%8A%A1%E5%A4%96%E5%8C%85-%E5%AF%92%E5%81%87%E4%BB%BB%E5%8A%A1/" rel="prev" title="服务外包(寒假任务)">
+      <i class="fa fa-chevron-left"></i> 服务外包(寒假任务)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/27/Kaggle-notes/" rel="next" title="Kaggle notes">
+      Kaggle notes <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E5%88%92%E5%88%86"><span class="nav-number">1.</span> <span class="nav-text">数据集划分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5"><span class="nav-number">2.</span> <span class="nav-text">混淆矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5%E8%A1%8D%E7%94%9F%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87"><span class="nav-number">2.0.1.</span> <span class="nav-text">混淆矩阵衍生评价指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%81%8F%E5%B7%AE%E4%B8%8E%E6%96%B9%E5%B7%AE"><span class="nav-number">3.</span> <span class="nav-text">偏差与方差</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

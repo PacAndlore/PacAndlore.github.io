@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="kaggle学习备忘，新手上路，请多关照">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kaggle notes">
+<meta property="og:url" content="http://example.com/2022/01/27/Kaggle-notes/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="kaggle学习备忘，新手上路，请多关照">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/.com//image-20220128223343205.png">
+<meta property="og:image" content="http://example.com/.com//image-20220128224613061.png">
+<meta property="og:image" content="http://example.com/.com//image-20220128224922162.png">
+<meta property="og:image" content="http://example.com/.com//image-20220128225001005.png">
+<meta property="og:image" content="http://example.com/.com//image-20220128225434751.png">
+<meta property="og:image" content="http://example.com/.com//image-20220128225511566.png">
+<meta property="article:published_time" content="2022-01-27T14:45:57.000Z">
+<meta property="article:modified_time" content="2022-01-29T02:43:46.964Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="机器学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/.com//image-20220128223343205.png">
+
+<link rel="canonical" href="http://example.com/2022/01/27/Kaggle-notes/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Kaggle notes | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/27/Kaggle-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Kaggle notes
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-01-27 22:45:57" itemprop="dateCreated datePublished" datetime="2022-01-27T22:45:57+08:00">2022-01-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-29 10:43:46" itemprop="dateModified" datetime="2022-01-29T10:43:46+08:00">2022-01-29</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>kaggle学习备忘，新手上路，请多关照</p>
+<span id="more"></span>
+<h1 id="时间序列"><a href="#时间序列" class="headerlink" title="时间序列"></a>时间序列</h1><h2 id="什么是时间序列"><a href="#什么是时间序列" class="headerlink" title="什么是时间序列"></a>什么是时间序列</h2><p>是一组随时间记录的观测结果，是进行预测的基础，观测结果通常是按照规律的时间段被记录，例如每天或每月</p>
+<h2 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(</span><br><span class="line">    <span class="string">&quot;../input/ts-course-data/book_sales.csv&quot;</span>,</span><br><span class="line">    index_col=<span class="string">&#x27;Date&#x27;</span>, <span class="comment">#index_col指定数据中哪一列为DataFrame的行索引，可指定多列形成层次索引</span></span><br><span class="line">    parse_dates=[<span class="string">&#x27;Date&#x27;</span>], <span class="comment">#parse_dates可令字符串解析成时间格式</span></span><br><span class="line">).drop(<span class="string">&#x27;Paperback&#x27;</span>, axis=<span class="number">1</span>)  <span class="comment">#drop删除Paperback这一列</span></span><br><span class="line"></span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+<h2 id="基于时间序列的线性回归分析"><a href="#基于时间序列的线性回归分析" class="headerlink" title="基于时间序列的线性回归分析"></a>基于时间序列的线性回归分析</h2><p>对于连续问题，可以采用线性回归来拟合出一条cost最小的函数以进行预测（个人理解，不一定完全对）</p>
+<p>公式:</p>
+<script type="math/tex; mode=display">
+target=weight_1*feature_1+weight_2*feature_2+bias</script><h2 id="时间序列的两个特征"><a href="#时间序列的两个特征" class="headerlink" title="时间序列的两个特征"></a>时间序列的两个特征</h2><h3 id="Time-step-features"><a href="#Time-step-features" class="headerlink" title="Time-step features"></a>Time-step features</h3><p>Time-step特征可以直接由日期得出，time dummy（时间虚拟变量）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment">#从0开始计算index列的个数，并且填入Time列中</span></span><br><span class="line">df[<span class="string">&#x27;Time&#x27;</span>] = np.arange(<span class="built_in">len</span>(df.index))</span><br><span class="line"></span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+<p>具有时间虚拟变量的线性回归产生模型</p>
+<script type="math/tex; mode=display">
+target=weight*time+bias</script><p>时间虚拟变量让我们可以将曲线拟合到时间序列中</p>
+<p>Time-step特性可以使我们根据数据对时间的依赖性进行建模，如果一个序列的值可以根据时间预测出来，那么他就是时间相关的。</p>
+<h3 id="Lag-features-滞后特征"><a href="#Lag-features-滞后特征" class="headerlink" title="Lag features (滞后特征)"></a>Lag features (滞后特征)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#为了研究滞后特征，我们新建一列使其看起来发生延后一日</span></span><br><span class="line">df[<span class="string">&#x27;Lag_1&#x27;</span>] = df[<span class="string">&#x27;Hardcover&#x27;</span>].shift(<span class="number">1</span>)  <span class="comment">#shif对DataFrame进行移动操作，此处向下移动一行</span></span><br><span class="line">df = df.reindex(columns=[<span class="string">&#x27;Hardcover&#x27;</span>, <span class="string">&#x27;Lag_1&#x27;</span>])</span><br><span class="line"></span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+<p>具有滞后性的线性回归模型</p>
+<script type="math/tex; mode=display">
+target=weight*lag+bias</script><p>当某天的数据与前一天的数据相关时，通常滞后性会很有用</p>
+<p>最好的时间序列模型通常会将时间步长特征和滞后特征组合使用</p>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><p>读取数据省略</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots()  <span class="comment">#一纸多图</span></span><br><span class="line">ax.plot(<span class="string">&#x27;Time&#x27;</span>, <span class="string">&#x27;Hardcover&#x27;</span>, data=book_sales, color=<span class="string">&#x27;0.75&#x27;</span>)</span><br><span class="line">ax = sns.regplot(x=<span class="string">&#x27;Time&#x27;</span>, y=<span class="string">&#x27;Hardcover&#x27;</span>, data=book_sales, ci=<span class="literal">None</span>, scatter_kws=<span class="built_in">dict</span>(color=<span class="string">&#x27;0.25&#x27;</span>)) <span class="comment">#绘图数据和线性回归模型拟合，ci设置置信区间</span></span><br><span class="line">ax.set_title(<span class="string">&#x27;Time Plot of Hardcover Sales&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>得到如下结果</p>
+<p><img src="/.com//image-20220128223343205.png" alt="image-20220128223343205"></p>
+<p>拟合的模型为</p>
+<script type="math/tex; mode=display">
+Hardcover=3.33*Time+150.5</script><p>拟合出的模型的斜率和截距是怎么求的？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line"></span><br><span class="line">df = average_sales.to_frame()</span><br><span class="line"></span><br><span class="line"><span class="comment"># YOUR CODE HERE: Create a time dummy</span></span><br><span class="line">time = np.arange(<span class="built_in">len</span>(df.index))</span><br><span class="line"></span><br><span class="line">df[<span class="string">&#x27;time&#x27;</span>] = time </span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<p><img src="/.com//image-20220128224613061.png" alt="image-20220128224613061" style="zoom:33%;"></p>
+<p>作为线性回归拟合的X部分需要的变量为DataFrame类型的，Y处的变量为Series类型的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># YOUR CODE HERE: Create training data</span></span><br><span class="line">X = df.loc[:,[<span class="string">&#x27;time&#x27;</span>]] <span class="comment">#feature  生成DataFrame类型的feature</span></span><br><span class="line">y = df.loc[:,<span class="string">&#x27;sales&#x27;</span>]  <span class="comment"># target  生成Series类型的target</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Train the model</span></span><br><span class="line">model = LinearRegression()</span><br><span class="line">model.fit(X, y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Store the fitted values as a time series with the same time index as</span></span><br><span class="line"><span class="comment"># the training data</span></span><br><span class="line">y_pred = pd.Series(model.predict(X), index=X.index)</span><br><span class="line"><span class="comment">#将得到的模型进行预测</span></span><br></pre></td></tr></table></figure>
+<p><img src="/.com//image-20220128224922162.png" alt="image-20220128224922162" style="zoom:33%;"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#画出图形</span></span><br><span class="line">ax = y.plot(**plot_params, alpha=<span class="number">0.5</span>)</span><br><span class="line">ax = y_pred.plot(ax=ax, linewidth=<span class="number">3</span>)</span><br><span class="line">ax.set_title(<span class="string">&#x27;Time Plot of Total Store Sales&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/.com//image-20220128225001005.png" alt="image-20220128225001005" style="zoom:33%;"></p>
+<p>以上都是时间步长模型的应用</p>
+<p>接下来是滞后模型的应用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">df = average_sales.to_frame()</span><br><span class="line"></span><br><span class="line"><span class="comment"># YOUR CODE HERE: Create a lag feature from the target &#x27;sales&#x27;</span></span><br><span class="line">lag_1 = df[<span class="string">&#x27;sales&#x27;</span>].shift(<span class="number">1</span>) <span class="comment">#此处创建一列滞后列</span></span><br><span class="line"></span><br><span class="line">df[<span class="string">&#x27;lag_1&#x27;</span>] = lag_1  <span class="comment"># add to dataframe</span></span><br><span class="line"></span><br><span class="line">X = df.loc[:, [<span class="string">&#x27;lag_1&#x27;</span>]].dropna()  <span class="comment"># features</span></span><br><span class="line">y = df.loc[:, <span class="string">&#x27;sales&#x27;</span>]  <span class="comment"># target</span></span><br><span class="line">y, X = y.align(X, join=<span class="string">&#x27;inner&#x27;</span>)  <span class="comment"># drop corresponding values in target</span></span><br><span class="line"><span class="comment">#因为lag_1有一行NAN，align将与NAN一行的y值删除</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># YOUR CODE HERE: Create a LinearRegression instance and fit it to X and y.</span></span><br><span class="line">model = LinearRegression()</span><br><span class="line">model.fit(X, y)</span><br><span class="line"><span class="comment"># YOUR CODE HERE: Create Store the fitted values as a time series with</span></span><br><span class="line"><span class="comment"># the same time index as the training data</span></span><br><span class="line">y_pred = pd.Series(model.predict(X), index=X.index)</span><br><span class="line">y_pred</span><br></pre></td></tr></table></figure>
+<p><img src="/.com//image-20220128225434751.png" alt="image-20220128225434751" style="zoom:33%;"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#画图</span></span><br><span class="line">fig, ax = plt.subplots()</span><br><span class="line">ax.plot(X[<span class="string">&#x27;lag_1&#x27;</span>], y, <span class="string">&#x27;.&#x27;</span>, color=<span class="string">&#x27;0.25&#x27;</span>)</span><br><span class="line">ax.plot(X[<span class="string">&#x27;lag_1&#x27;</span>], y_pred)</span><br><span class="line">ax.<span class="built_in">set</span>(aspect=<span class="string">&#x27;equal&#x27;</span>, ylabel=<span class="string">&#x27;sales&#x27;</span>, xlabel=<span class="string">&#x27;lag_1&#x27;</span>, title=<span class="string">&#x27;Lag Plot of Average Sales&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/.com//image-20220128225511566.png" alt="image-20220128225511566" style="zoom:33%;"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 机器学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/26/Machine-Learning-notes/" rel="prev" title="Machine Learning notes">
+      <i class="fa fa-chevron-left"></i> Machine Learning notes
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/29/Learning-English-With-Watching-Peppa-Pig/" rel="next" title="Peppa Pig">
+      Peppa Pig <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">时间序列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97"><span class="nav-number">1.1.</span> <span class="nav-text">什么是时间序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-number">1.2.</span> <span class="nav-text">读取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E7%9A%84%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90"><span class="nav-number">1.3.</span> <span class="nav-text">基于时间序列的线性回归分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E7%9A%84%E4%B8%A4%E4%B8%AA%E7%89%B9%E5%BE%81"><span class="nav-number">1.4.</span> <span class="nav-text">时间序列的两个特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Time-step-features"><span class="nav-number">1.4.1.</span> <span class="nav-text">Time-step features</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lag-features-%E6%BB%9E%E5%90%8E%E7%89%B9%E5%BE%81"><span class="nav-number">1.4.2.</span> <span class="nav-text">Lag features (滞后特征)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E8%B7%B5"><span class="nav-number">1.5.</span> <span class="nav-text">实践</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
