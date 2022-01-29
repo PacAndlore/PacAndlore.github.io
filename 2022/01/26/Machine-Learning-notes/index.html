@@ -24,18 +24,18 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Machine Learning notes">
 <meta property="og:url" content="http://example.com/2022/01/26/Machine-Learning-notes/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Pacm4n&#39;s blog">
 <meta property="og:description" content="模型越复杂，模型拟合能力越强，偏差逐渐变小，容易过拟合；模型越复杂，可能性越多，方差越大。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/.com//image-20220127000146811.png">
-<meta property="og:image" content="http://example.com/.com//image-20220127000127633.png">
-<meta property="og:image" content="http://example.com/.com//image-20220127002003657.png">
+<meta property="og:image" content="http://example.com/2022/01/26/Machine-Learning-notes/image-20220127000146811.png">
+<meta property="og:image" content="http://example.com/2022/01/26/Machine-Learning-notes/image-20220127000127633.png">
+<meta property="og:image" content="http://example.com/2022/01/26/Machine-Learning-notes/image-20220127002003657.png">
 <meta property="article:published_time" content="2022-01-26T15:35:40.000Z">
 <meta property="article:modified_time" content="2022-01-26T17:20:09.625Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Pacm4n">
 <meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/.com//image-20220127000146811.png">
+<meta name="twitter:image" content="http://example.com/2022/01/26/Machine-Learning-notes/image-20220127000146811.png">
 
 <link rel="canonical" href="http://example.com/2022/01/26/Machine-Learning-notes/">
 
@@ -50,7 +50,7 @@
   };
 </script>
 
-  <title>Machine Learning notes | Hexo</title>
+  <title>Machine Learning notes | Pacm4n's blog</title>
   
 
 
@@ -101,9 +101,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">Pacm4n's blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">宁静以致远</p>
   </div>
 
   <div class="site-nav-right">
@@ -159,12 +160,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Pacm4n">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pacm4n's blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -210,19 +211,19 @@
 <li>测试机不参与模型训练流程，其作用为检验模型是否有效</li>
 </ul>
 <p>三者关系如下</p>
-<p><img src="/.com//image-20220127000146811.png" alt="image-20220127000146811"></p>
+<p><img src="/2022/01/26/Machine-Learning-notes/image-20220127000146811.png" alt="image-20220127000146811"></p>
 <h2 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h2><ul>
 <li>二分类数据集可分为正例和负例两种</li>
 <li>数据集经过模型分类后可分为预测正例和预测负例</li>
 <li>将两种分类方法交叉后产生了四种数据集合，即正例被预测为正例(<strong>T</strong>rue<strong>P</strong>ositives)、正例被预测为负例(<strong>F</strong>alse<strong>P</strong>ositives)、负例被预测为负例(<strong>T</strong>rue<strong>N</strong>egatives)、负例被预测为正例(<strong>F</strong>alse<strong>P</strong>ositives)</li>
 </ul>
-<p><img src="/.com//image-20220127000127633.png" alt="image-20220127000127633" style="zoom:33%;"></p>
+<p><img src="/2022/01/26/Machine-Learning-notes/image-20220127000127633.png" alt="image-20220127000127633" style="zoom:33%;"></p>
 <h4 id="混淆矩阵衍生评价指标"><a href="#混淆矩阵衍生评价指标" class="headerlink" title="混淆矩阵衍生评价指标"></a>混淆矩阵衍生评价指标</h4><ul>
 <li>召回率(Recall)=TP/(TP+FN)   </li>
 </ul>
 <p>将某个标签判断正确的概率（宁可错杀不放过一个），比如计算正样本的召回率，就是模型预测为正样本的数量处于总的正样本数量；</p>
 <p>示意图如下，当M1模型转化为M2模型时，圆圈的召回率增大，三角的召回率减小。</p>
-<p><img src="/.com//image-20220127002003657.png" alt="image-20220127002003657" style="zoom: 33%;"></p>
+<p><img src="/2022/01/26/Machine-Learning-notes/image-20220127002003657.png" alt="image-20220127002003657" style="zoom: 33%;"></p>
 <ul>
 <li>精准度(Precision)=TP/(TP+FP)</li>
 </ul>
@@ -327,7 +328,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Pacm4n</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -371,7 +372,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Pacm4n</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
