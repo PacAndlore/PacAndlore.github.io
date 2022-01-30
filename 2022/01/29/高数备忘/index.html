@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="考研高数复习备忘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="考研数学备忘">
+<meta property="og:url" content="http://example.com/2022/01/29/%E9%AB%98%E6%95%B0%E5%A4%87%E5%BF%98/index.html">
+<meta property="og:site_name" content="Pacm4n&#39;s blog">
+<meta property="og:description" content="考研高数复习备忘">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/01/29/%E9%AB%98%E6%95%B0%E5%A4%87%E5%BF%98/image-20220129220949705.png">
+<meta property="article:published_time" content="2022-01-29T13:16:20.000Z">
+<meta property="article:modified_time" content="2022-01-29T14:12:48.559Z">
+<meta property="article:author" content="Pacm4n">
+<meta property="article:tag" content="考研">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/01/29/%E9%AB%98%E6%95%B0%E5%A4%87%E5%BF%98/image-20220129220949705.png">
+
+<link rel="canonical" href="http://example.com/2022/01/29/%E9%AB%98%E6%95%B0%E5%A4%87%E5%BF%98/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>考研数学备忘 | Pacm4n's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Pacm4n's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">宁静以致远</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/29/%E9%AB%98%E6%95%B0%E5%A4%87%E5%BF%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pacm4n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pacm4n's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          考研数学备忘
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-01-29 21:16:20 / Modified: 22:12:48" itemprop="dateCreated datePublished" datetime="2022-01-29T21:16:20+08:00">2022-01-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>考研高数复习备忘</p>
+<span id="more"></span>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>终于是来到了这一步，自从初二开始被数学折磨到之后，数学成绩便再也没有好转的迹象，不过现在是不得不学了，克服对数学的恐惧，自发地爱上数学吧。从今天开始复习考研数学二，寒假期间每天看一节课，做相应的例题，查漏补缺，为开学后的全面复习做准备。开始的还算早，还有机会。</p>
+<p>​                                                                                                                                                                                            January 29 2022</p>
+<h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>数学不知道欠下了多少债，一点点补吧。</p>
+<h2 id="一、集合论"><a href="#一、集合论" class="headerlink" title="一、集合论"></a>一、集合论</h2><h2 id="二、三角公式"><a href="#二、三角公式" class="headerlink" title="二、三角公式"></a>二、三角公式</h2><h3 id="积化和差公式"><a href="#积化和差公式" class="headerlink" title="积化和差公式"></a>积化和差公式</h3><script type="math/tex; mode=display">
+\begin{align}
+sin\alpha sin\beta=\frac 12[cos(\alpha -\beta)-cos(\alpha +\beta)]\\
+sin\alpha cos\beta=\frac 12[sin(\alpha +\beta)+sin(\alpha -\beta)]\\
+cos\alpha sin\beta=\frac 12[sin(\alpha +\beta)-sin(\alpha -\beta)]\\
+cos\alpha cos\beta=\frac 12[cos(\alpha -\beta)+cos(\alpha +\beta)]\\
+\end{align}</script><h3 id="和差化积公式"><a href="#和差化积公式" class="headerlink" title="和差化积公式"></a>和差化积公式</h3><script type="math/tex; mode=display">
+\begin{align}
+&sin\alpha +sin\beta=2sin\frac {\alpha+\beta}2cos \frac {\alpha-\beta}2\\
+&sin\alpha -sin\beta=2cos\frac {\alpha+\beta}2sin \frac {\alpha-\beta}2\\
+&cos\alpha +cos\beta=2cos\frac {\alpha+\beta}2sin \frac  {\alpha-\beta}2\\
+&cos\alpha -cos\beta=-2sin\frac{\alpha+\beta}2sin \frac{\alpha-\beta}2
+\end{align}</script><h3 id="倍角公式"><a href="#倍角公式" class="headerlink" title="倍角公式"></a>倍角公式</h3><h4 id="二倍角公式"><a href="#二倍角公式" class="headerlink" title="二倍角公式"></a>二倍角公式</h4><script type="math/tex; mode=display">
+\begin{align}
+&sin2\alpha=sin\alpha cos\alpha+sin\alpha cos\alpha=2sin\alpha cos\alpha=\frac {2tan\alpha}{1+tan^2\alpha}\\
+&cos2\alpha=cos^2\alpha-sin^2\alpha=2cos^2\alpha-1=1-2sin^2\alpha=\frac{1-tan^2\alpha}{1+tan^2\alpha}\\
+&tan2\alpha=\frac {2tan\alpha}{1-tan^2\alpha}
+\end{align}</script><h4 id="三倍角公式"><a href="#三倍角公式" class="headerlink" title="三倍角公式"></a>三倍角公式</h4><script type="math/tex; mode=display">
+\begin{align}
+&sin3\alpha=3sin\alpha-4sin^3\alpha\\
+&cos3\alpha=4cos^3\alpha-3cos\alpha\\
+&sin3\alpha=4sin\alpha sin(60\degree-\alpha)sin(60\degree+\alpha)\\
+&cos3\alpha=4cos\alpha cos(60\degree-\alpha)cos(60\degree+\alpha)\\
+&tan3\alpha=tan\alpha tan(60\degree-\alpha)tan(60\degree+\alpha)
+\end{align}</script><h3 id="半角公式"><a href="#半角公式" class="headerlink" title="半角公式"></a>半角公式</h3><script type="math/tex; mode=display">
+\begin{align}
+&sin\frac \alpha2=\pm\sqrt \frac{1-cos\alpha}2\\
+&cos\frac \alpha2=\pm\sqrt \frac{1+cos\alpha}2\\
+&tan\frac \alpha2=\frac {sin\alpha}{1+cos\alpha}=\frac{1-cos\alpha}{sin\alpha}=\pm\sqrt\frac{1-cos\alpha}{1+cos\alpha}\\
+&cot\frac \alpha2=\frac{1+cos\alpha}{sin\alpha}=\frac{sin\alpha}{1-cos\alpha}=\pm\sqrt\frac{1+cos\alpha}{1-cos\alpha}
+
+\end{align}</script><h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><ol>
+<li>奇变偶不变，符号看象限</li>
+<li>无论$\alpha$为多大的角，都将$\alpha$看成锐角</li>
+</ol>
+<h3 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h3><p>在打公式时还学到了markdown打多行公式的知识</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.用\begin&#123;align&#125;和\end&#123;align&#125;来界定多行公式的界限。</span><br><span class="line">2.&quot;&amp;&quot;用于表明对齐起始位置</span><br><span class="line">3. \begin&#123;align&#125;和\end&#123;align&#125;不能与公式空一行,要紧贴.</span><br><span class="line">4. 公式句尾加&quot;\\&quot;表示分行</span><br></pre></td></tr></table></figure>
+<h2 id="三、重要不等式"><a href="#三、重要不等式" class="headerlink" title="三、重要不等式"></a>三、重要不等式</h2><p><img src="/2022/01/29/%E9%AB%98%E6%95%B0%E5%A4%87%E5%BF%98/image-20220129220949705.png" alt="image-20220129220949705" style="zoom: 50%;"></p>
+<h2 id="四、极坐标"><a href="#四、极坐标" class="headerlink" title="四、极坐标"></a>四、极坐标</h2><h1 id="第一章-（函数-极限-连续）"><a href="#第一章-（函数-极限-连续）" class="headerlink" title="第一章 （函数 极限 连续）"></a>第一章 （函数 极限 连续）</h1><h2 id="第一节-（函数）"><a href="#第一节-（函数）" class="headerlink" title="第一节 （函数）"></a>第一节 （函数）</h2>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%80%83%E7%A0%94/" rel="tag"># 考研</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/27/Kaggle-notes/" rel="prev" title="Kaggle notes">
+      <i class="fa fa-chevron-left"></i> Kaggle notes
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">预备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%9B%86%E5%90%88%E8%AE%BA"><span class="nav-number">2.1.</span> <span class="nav-text">一、集合论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%89%E8%A7%92%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">二、三角公式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%AF%E5%8C%96%E5%92%8C%E5%B7%AE%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.1.</span> <span class="nav-text">积化和差公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%92%8C%E5%B7%AE%E5%8C%96%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.2.</span> <span class="nav-text">和差化积公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%8D%E8%A7%92%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.3.</span> <span class="nav-text">倍角公式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%80%8D%E8%A7%92%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">二倍角公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E5%80%8D%E8%A7%92%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">三倍角公式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8A%E8%A7%92%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.4.</span> <span class="nav-text">半角公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%B1%E5%AF%BC%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.5.</span> <span class="nav-text">诱导公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%95%AA%E5%A4%96"><span class="nav-number">2.2.6.</span> <span class="nav-text">番外</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%87%8D%E8%A6%81%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">三、重要不等式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%9E%81%E5%9D%90%E6%A0%87"><span class="nav-number">2.4.</span> <span class="nav-text">四、极坐标</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%EF%BC%88%E5%87%BD%E6%95%B0-%E6%9E%81%E9%99%90-%E8%BF%9E%E7%BB%AD%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">第一章 （函数 极限 连续）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82-%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">第一节 （函数）</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Pacm4n</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pacm4n</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
