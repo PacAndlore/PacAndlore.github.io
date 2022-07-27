@@ -1,10 +1,604 @@
-{% extends "_layout.swig" %}
-{% import '_macro/post.swig' as post_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %} {{ page.title }} - {{ config.title }} {% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block content %}
-    <div id="primary">
-        {{ post_template.render(page) }}
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="月度总结以及下月计划From February, 2022">
+<meta property="og:type" content="article">
+<meta property="og:title" content="月度总结以及下月计划">
+<meta property="og:url" content="http://example.com/2022/03/01/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Pacm4n&#39;s blog">
+<meta property="og:description" content="月度总结以及下月计划From February, 2022">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-01T15:36:58.000Z">
+<meta property="article:modified_time" content="2022-07-26T07:09:59.798Z">
+<meta property="article:author" content="Pacm4n">
+<meta property="article:tag" content="杂谈">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/03/01/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>月度总结以及下月计划 | Pacm4n's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-{% endblock %}
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Pacm4n's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">宁静以致远</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pacm4n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pacm4n's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          月度总结以及下月计划
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-01 23:36:58" itemprop="dateCreated datePublished" datetime="2022-03-01T23:36:58+08:00">2022-03-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-26 15:09:59" itemprop="dateModified" datetime="2022-07-26T15:09:59+08:00">2022-07-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="月度总结以及下月计划"><a href="#月度总结以及下月计划" class="headerlink" title="月度总结以及下月计划"></a>月度总结以及下月计划</h1><p>From February, 2022</p>
+<span id="more"></span>
+<h2 id="二月总结"><a href="#二月总结" class="headerlink" title="二月总结"></a>二月总结</h2><h3 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h3><p>二月英语只背了考研核心单词2200个，一个月全勤，一般都是200个一天（150个复习，50个生词）</p>
+<p>其中有5天比较水，4天是为了数模，后一天为了恢复下熬了一夜身体</p>
+<p>单词方面还好吧，感觉一天200花的时间还是有点长，差不多一小时左右。三月份单词调低到了175个，主要是考虑到有三个半天有课，而且要开始上英语的网课了。背的多有时候效率也不是很高。</p>
+<h3 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h3><p>数学上网课方面上到了第二章，习题方面660做了40题。</p>
+<p>上网课我感觉还上得比较细致的，习题有点难正确率挺低的</p>
+<p>而且<strong>总是犯脑残错误</strong>，比如乘式求导不加项的，$x^a$求导都会求错，我不知道该怎么解决，只有先增加做题量了。</p>
+<p>每天都会做两道武忠祥每日一题。</p>
+<h3 id="408"><a href="#408" class="headerlink" title="408"></a>408</h3><p>计组：开始上计算机组成原理的网课，上到了第二章，还没到核心内容</p>
+<p>数据结构：每天（有空）leetcode刷一题。</p>
+<h2 id="三月计划"><a href="#三月计划" class="headerlink" title="三月计划"></a>三月计划</h2><h3 id="英语-1"><a href="#英语-1" class="headerlink" title="英语"></a>英语</h3><ul>
+<li>[X] 唐迟长难句</li>
+<li>[X] 背完一遍核心词后，开始第二遍。三月刷完第二遍</li>
+<li>[ ] 如果刷完了第二遍，刷新的单词，并开始看唐迟的阅读技巧课</li>
+<li>[ ] 唐迟考研真题文章背景简介</li>
+<li>[ ] 阅读经典真题课</li>
+</ul>
+<h3 id="数学-1"><a href="#数学-1" class="headerlink" title="数学"></a>数学</h3><ul>
+<li>[X] 上完不定积分、定积分与反常积分、定积分的应用、二重积分</li>
+<li>[ ] 二刷以上课程</li>
+<li>[ ] 继续刷题吧，我感觉660的刷题有点难，看后续找本基础点的刷（或许是1800），反正题量要保证</li>
+<li>[X] 每日一题二刷</li>
+</ul>
+<h3 id="408-1"><a href="#408-1" class="headerlink" title="408"></a>408</h3><ul>
+<li>[X] 计组把课上完一遍</li>
+<li>[ ] 计组上完有空上操作系统</li>
+<li>[ ] leetcode刷题（不要求每日，有空就刷）</li>
+</ul>
+<h2 id="三月总结"><a href="#三月总结" class="headerlink" title="三月总结"></a>三月总结</h2><h3 id="英语-2"><a href="#英语-2" class="headerlink" title="英语"></a>英语</h3><p>每日日常背单词，2200已经背完了。现在每天红宝书两个单元一天为主，app上背5000大纲词汇为辅。</p>
+<p>长难句视频课看了一遍，现在忘得差不多了，4月找机会再看两遍。</p>
+<p>唐迟的网课看了文章背景简介，看了几节感觉效果一般，有点像历史课，先放放。</p>
+<p>真题课就看了一节，下个月这个优先看完。</p>
+<p>三月给英语的时间挺少的，一般就背背单词就没有时间留给英语了。4月份多安排点时间给英语吧。</p>
+<h3 id="数学-2"><a href="#数学-2" class="headerlink" title="数学"></a>数学</h3><p>看完了积分的视频课，除了二重积分不是很懂之外，其他都还行。</p>
+<p>定积分已经完成二刷，并做完了1800基础篇和660不定积分的题目，做了相应的总结，基本上的题目都会做了，现在在二刷定积分。</p>
+<p>数学花的时间还是比较多的，但是进度比较慢。反正数二内容也不多，打好基础再说。</p>
+<h3 id="408-2"><a href="#408-2" class="headerlink" title="408"></a>408</h3><p>这个月计组花的时间是最多的，计组已经初步过了一遍网课，并且已经开始二刷。也不能叫二刷，因为没学过这门课，所以第一遍当预习。</p>
+<p>按照计组-OS-数据结构-计网的顺序复习</p>
+<p>计组的进度现在到数据的表示和运算这一章，先看一遍课本，再做单科书题目，记录下做错的题目。课本没提到的考点，单科书再看看。</p>
+<p>这个月效率比较低，因为月中有一次起的太早，学了一天直接厌学了，还是保持固定的作息，琐事也比较多，比较影响状态，四月份应该都会结束。</p>
+<h2 id="四月规划"><a href="#四月规划" class="headerlink" title="四月规划"></a>四月规划</h2><h3 id="英语-3"><a href="#英语-3" class="headerlink" title="英语"></a>英语</h3><ul>
+<li>[ ] 二刷唐迟长难句</li>
+<li>[ ] 看完唐迟阅读经典真题班</li>
+<li>[ ] 三刷唐迟长难句</li>
+<li>[X] 日常背单词</li>
+<li>[ ] 刷完再补充</li>
+</ul>
+<h3 id="数学-3"><a href="#数学-3" class="headerlink" title="数学"></a>数学</h3><ul>
+<li>[X] 二刷完积分</li>
+<li>[ ] 开微分方程部分，尽量四月份完成高数</li>
+</ul>
+<h3 id="408-3"><a href="#408-3" class="headerlink" title="408"></a>408</h3><ul>
+<li>[ ] 二刷计组</li>
+<li>[ ] 开OS</li>
+</ul>
+<h2 id="四月总结"><a href="#四月总结" class="headerlink" title="四月总结"></a>四月总结</h2><p>四月可能是最迷茫的一个月了，期间差点几乎就放弃考研了，当时想的是我要是能在本科就能上大厂，那为什么还要考研，然后就去写简历，但是没敢投，主要是觉得自己没有专精的东西，一些小打小闹的东西都拿不出手，焦虑了很久还通宵了一天想问题，大概过了七天，在看到Y4taker拿到了阿里的offer才反应过来：哦，原来是这样的大佬才能在本科上大厂。便算是彻底放弃了本科找工作的念头（希望秋招不会燃起，我觉得大概不会了）。</p>
+<p>总之，这周效率不高，停摆7天，但考研信念更加坚定，并且找到了研友，每天能投入的时间更多。</p>
+<p>因为四月有停摆，所以把五一假期拿来补进度，在5月4号写总结和计划。</p>
+<h3 id="英语-4"><a href="#英语-4" class="headerlink" title="英语"></a>英语</h3><p>英语单词有7天没背，问题不是很大，将新旧词比例调成了1：2，想先把5500先过一遍。</p>
+<p>网课还是没看啊，真没时间。</p>
+<p>开始做真题了，从00年开始做，每两天一篇。</p>
+<p>做真题发现的问题如下：</p>
+<ul>
+<li>型近词总是搞错，虽然在背单词的时候已经有意识地在搞型近词，但这几天还是总是搞错词义，我暂且将其归为词汇量不够，再背完5500要是还会这样，我就要专门整一个型近词本了。现在我没时间搞这个。</li>
+<li>感觉文章我没完全读懂却还是能够做出题，可能是题的年份太老，还是老题先刷着吧，不想浪费新题在我没有完备的做题方法之前。</li>
+<li>语法还是不行，感觉得去看看基础的语法课，那得爆肝了</li>
+<li>好像把以前课上学的做题方法都忘了，有时间再看看</li>
+</ul>
+<h3 id="数学-4"><a href="#数学-4" class="headerlink" title="数学"></a>数学</h3><p>高数部分还是没有结束，还差一个微分方程，这个月学完了二重积分和多元微分学，我感觉学的还行，有时候武听不懂会去听张的，张的确实讲的还不错的，能听懂。没有做1800了，买了880和660，做了1800确实感觉做题都挺顺了，下个月再看，有时间还是可以刷1800，或者880。我感觉虽然进度比较慢，但是学的还是挺扎实的，反正数二内容少，慢慢来吧。不过五月初一定要过完一遍高数，然后开始线代了。</p>
+<p>高数做题时的问题：</p>
+<ul>
+<li>计算问题比较严重，有时候会漏算或者抄错，或者就是单纯的算错。因此买了杨超的三大计算，练练计算。暂时归为刷题量不够。</li>
+<li>其余的还好，感觉是刷题量少了，没暴露出更多的问题，那问题来了，时间都去哪了，我不知道时间花在哪了，下个月我要做个日报，看看每天都把时间花哪去了。（可能是看网课花了太多时间，由看武又看张的）</li>
+</ul>
+<h3 id="408-4"><a href="#408-4" class="headerlink" title="408"></a>408</h3><p>408还在复习计组，绝了，计组看样子是需要两个半月了。第五章过了一半了，还有总线和io两章，相对来说不算很难，应该很快就能过完吧。</p>
+<p>计组问题：</p>
+<ul>
+<li>计组真的好难，感觉在计算涉及二进制的题很会错，那种也是比较难的题。这我也只能暂归为题量不够了</li>
+<li>没有将知识串联起来，好像都是在单独地学习每个知识点，感觉这不是一个好的做法，但是毕竟是第一遍，先这样过着吧，二刷再看看能否做个思维导图什么的串一下知识</li>
+<li>感觉对一些概念的理解还是不够的，有些东西都很糊。比如现在学的微指令，机器周期之类的概念还是不熟，其实说很不熟也还行，就是没有那种理解了的感觉。暂时想到的解决方法，那就多翻翻教材，重复多次，多看看应该会有效的。</li>
+<li>这几次复习都没有带教材，感觉教材上的东西其实和王道书上差不多，想着先把王道书过一遍再去看教材补充吧。</li>
+</ul>
+<h2 id="五月规划"><a href="#五月规划" class="headerlink" title="五月规划"></a>五月规划</h2><h3 id="英语-5"><a href="#英语-5" class="headerlink" title="英语"></a>英语</h3><p>补语法，背单词！</p>
+<ul>
+<li>[ ] 田静语法课</li>
+<li>[ ] 唐迟长难句二刷</li>
+<li>[X] 做真题，做完后看唐迟阅读讲解，每两/三天一篇</li>
+<li>[X] 背单词，做词量测试 （4月词汇量6976）</li>
+</ul>
+<h3 id="数学-5"><a href="#数学-5" class="headerlink" title="数学"></a>数学</h3><p>主练计算，增加题量</p>
+<ul>
+<li>[X] 过完高数</li>
+<li>[X] 开始线代，并同时二刷高数。</li>
+<li>[ ] 660一阶高数做完</li>
+<li>[X] 三大计算在二刷高数时做。</li>
+</ul>
+<h3 id="408-5"><a href="#408-5" class="headerlink" title="408"></a>408</h3><ul>
+<li>[X] 再怎么都要过完计组了</li>
+<li>[X] 开操作系统，真的得开了</li>
+</ul>
+<h3 id="额外"><a href="#额外" class="headerlink" title="额外"></a>额外</h3><p>记录下每天学了什么</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">日期</th>
+<th style="text-align:center">学习时间</th>
+<th style="text-align:center">英语</th>
+<th style="text-align:center">数学</th>
+<th style="text-align:center">408</th>
+<th style="text-align:center">评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">5.4</td>
+<td style="text-align:center">10:30-20:00</td>
+<td style="text-align:center">单词、00年文章3做完对完答案</td>
+<td style="text-align:center">完整刷了一遍讲义上多元微分学的题目，多元微分结束</td>
+<td style="text-align:center">过完了第五章中5.4和5.5</td>
+<td style="text-align:center">起的晚了点，其实学习的效率还可以，这样列出来，感觉一天也没学什么</td>
+</tr>
+<tr>
+<td style="text-align:center">5.5</td>
+<td style="text-align:center">8:00-21:30</td>
+<td style="text-align:center">单词、昨天做的文章生词整理、看唐迟阅读课</td>
+<td style="text-align:center">学了一半微分方程的内容,做了几道660上多元微分的题目，感觉还是差点，有些题不会做了</td>
+<td style="text-align:center">过完了5.5和5.6，第五章结束</td>
+<td style="text-align:center">今天一天都挺困的，效率不高，数学花的时间少了，英语听课不够细致。</td>
+</tr>
+<tr>
+<td style="text-align:center">5.6-5.9</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">日常背单词、刷真题、看唐迟阅读课</td>
+<td style="text-align:center">高数知识性的一轮复习结束，正在做微分方程1800的题目巩固</td>
+<td style="text-align:center">计算机组成原理复习结束，后面的时间做计组的思维导图整体复习一遍，然后开始操作系统</td>
+<td style="text-align:center">复习效果还行，数学和408都有了明显的进展，英语阅读做的情况还行。以后总结改为一周一次</td>
+</tr>
+<tr>
+<td style="text-align:center">5.10-5.15</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">日常背单词、刷真题、看唐迟阅读课。唐迟阅读课还有2.5集</td>
+<td style="text-align:center">高数部分微分方程和多元微分1800入门训练和660第一部分相关题目结束。算是结束了一轮复习。下周开始线代，并每天抽一小时时间复习高数</td>
+<td style="text-align:center">计组结束，思维导图先不做了，先刷操作系统。本周操作系统过完了1.1和1.2。</td>
+<td style="text-align:center">这周学习进度不咋地，下周烦人事也挺多的。尽力学吧</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="五月总结"><a href="#五月总结" class="headerlink" title="五月总结"></a>五月总结</h2><p>五月极其堕怠。</p>
+<h3 id="英语-6"><a href="#英语-6" class="headerlink" title="英语"></a>英语</h3><p>单词就背了18天，其余几天都在摸鱼。真题卷做了一些。</p>
+<p>五月词汇量测试 10675 有些词猜了下，不过词汇量确实有所增加，还行。</p>
+<h3 id="数学-6"><a href="#数学-6" class="headerlink" title="数学"></a>数学</h3><p>高数已经结束了，在刷三大计算，极限还有一两章就刷完了，对极限的计算特别是泰勒公式的运用和理解都加深了挺多。</p>
+<p>线代还有两章就上完了。</p>
+<h3 id="408-6"><a href="#408-6" class="headerlink" title="408"></a>408</h3><p>计组结束，操作系统第一章结束了，进程线程也差不多了，不过到目前为止可能有20天左右没学过408了。</p>
+<p>总的来说这个月极其堕怠，没有学习状态，也没有什么深刻的反思，下个月要调整状态。</p>
+<h2 id="六月计划"><a href="#六月计划" class="headerlink" title="六月计划"></a>六月计划</h2><h3 id="英语-7"><a href="#英语-7" class="headerlink" title="英语"></a>英语</h3><ul>
+<li>[X] 继续背单词</li>
+<li>[X] 刷真题，二天一篇阅读</li>
+</ul>
+<h3 id="数学-7"><a href="#数学-7" class="headerlink" title="数学"></a>数学</h3><ul>
+<li>[X] 结束线代</li>
+<li>[ ] 最好能一刷完三大计算和660，准备强化</li>
+</ul>
+<h3 id="408-7"><a href="#408-7" class="headerlink" title="408"></a>408</h3><ul>
+<li>[X] 结束操作系统！</li>
+</ul>
+<h2 id="六月总结"><a href="#六月总结" class="headerlink" title="六月总结"></a>六月总结</h2><h3 id="英语-8"><a href="#英语-8" class="headerlink" title="英语"></a>英语</h3><p>词汇量测试：    11635</p>
+<p>有6天没有背单词</p>
+<p>5500考研词汇还有20%就背完一遍了</p>
+<p>10年前的真题做到05年第二篇，做的比较慢。</p>
+<h3 id="数学-8"><a href="#数学-8" class="headerlink" title="数学"></a>数学</h3><p>高数部分在做三大计算和660，三大计算的极限部分做完了，刚开始做导数部分，做的比较慢，660也做的比较慢。三大计算正确率七八成，660正确率比较低，五成吧。</p>
+<p>线代部分，比较模糊地过完了一遍基础，感觉不太行，还得再来一遍。</p>
+<h3 id="408-8"><a href="#408-8" class="headerlink" title="408"></a>408</h3><p>OS刚好在7月份之前结束了，内容比较少 只有五章。接下来就开始DS。</p>
+<h2 id="七月计划"><a href="#七月计划" class="headerlink" title="七月计划"></a>七月计划</h2><h3 id="英语-9"><a href="#英语-9" class="headerlink" title="英语"></a>英语</h3><ul>
+<li>[X] 结束一轮5500单词，背完紧接着二轮</li>
+<li>[x] 结束10年前所有真题阅读</li>
+<li>[ ] 二刷唐迟长难句</li>
+<li>[ ] 精读10后的真题阅读</li>
+</ul>
+<h3 id="数学-9"><a href="#数学-9" class="headerlink" title="数学"></a>数学</h3><ul>
+<li>[ ] 做线代小程序210基础题</li>
+<li>[ ] 做完三大计算</li>
+<li>[ ] 做完660</li>
+</ul>
+<h3 id="408-9"><a href="#408-9" class="headerlink" title="408"></a>408</h3><ul>
+<li>[ ] 结束DS</li>
+<li>[ ] 开CN</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%9D%82%E8%B0%88/" rel="tag"># 杂谈</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/04/leetcode%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="prev" title="leetcode刷题记录">
+      <i class="fa fa-chevron-left"></i> leetcode刷题记录
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/07/27/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/" rel="next" title="前端学习">
+      前端学习 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93%E4%BB%A5%E5%8F%8A%E4%B8%8B%E6%9C%88%E8%AE%A1%E5%88%92"><span class="nav-number">1.</span> <span class="nav-text">月度总结以及下月计划</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%9C%88%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.</span> <span class="nav-text">二月总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD"><span class="nav-number">1.1.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6"><span class="nav-number">1.1.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408"><span class="nav-number">1.1.3.</span> <span class="nav-text">408</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E6%9C%88%E8%AE%A1%E5%88%92"><span class="nav-number">1.2.</span> <span class="nav-text">三月计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">408</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E6%9C%88%E6%80%BB%E7%BB%93"><span class="nav-number">1.3.</span> <span class="nav-text">三月总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">408</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E6%9C%88%E8%A7%84%E5%88%92"><span class="nav-number">1.4.</span> <span class="nav-text">四月规划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-3"><span class="nav-number">1.4.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">408</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E6%9C%88%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.</span> <span class="nav-text">四月总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-4"><span class="nav-number">1.5.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-4"><span class="nav-number">1.5.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-4"><span class="nav-number">1.5.3.</span> <span class="nav-text">408</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E6%9C%88%E8%A7%84%E5%88%92"><span class="nav-number">1.6.</span> <span class="nav-text">五月规划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-5"><span class="nav-number">1.6.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-5"><span class="nav-number">1.6.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-5"><span class="nav-number">1.6.3.</span> <span class="nav-text">408</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%9D%E5%A4%96"><span class="nav-number">1.6.4.</span> <span class="nav-text">额外</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E6%9C%88%E6%80%BB%E7%BB%93"><span class="nav-number">1.7.</span> <span class="nav-text">五月总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-6"><span class="nav-number">1.7.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-6"><span class="nav-number">1.7.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-6"><span class="nav-number">1.7.3.</span> <span class="nav-text">408</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E6%9C%88%E8%AE%A1%E5%88%92"><span class="nav-number">1.8.</span> <span class="nav-text">六月计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-7"><span class="nav-number">1.8.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-7"><span class="nav-number">1.8.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-7"><span class="nav-number">1.8.3.</span> <span class="nav-text">408</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93"><span class="nav-number">1.9.</span> <span class="nav-text">六月总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-8"><span class="nav-number">1.9.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-8"><span class="nav-number">1.9.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-8"><span class="nav-number">1.9.3.</span> <span class="nav-text">408</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E6%9C%88%E8%AE%A1%E5%88%92"><span class="nav-number">1.10.</span> <span class="nav-text">七月计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD-9"><span class="nav-number">1.10.1.</span> <span class="nav-text">英语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6-9"><span class="nav-number">1.10.2.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-9"><span class="nav-number">1.10.3.</span> <span class="nav-text">408</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Pacm4n</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pacm4n</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
